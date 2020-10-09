@@ -60,6 +60,14 @@ def remove_node(node):
 
     Does not return anything; changes list in place.
     """
+    ## see if there is a next node
+    if node.next is None:
+        print('error')
+    
+    #reassign node
+    node.data = node.next.data
+    node.next = node.next.next
+
 
 
 if __name__ == '__main__':
