@@ -42,6 +42,14 @@ def reverse_linked_list(head):
     >>> reverse_linked_list(ll).as_string()
     '321'
     """
+    final_head = None
+    current_node = head
+    while current_node:
+        final_head = Node(current_node.data, final_head)
+        current_node = current_node.next
+
+    return final_head
+
 
 
 if __name__ == '__main__':
