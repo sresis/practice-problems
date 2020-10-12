@@ -28,6 +28,16 @@ def recursive_index(needle, haystack):
 
     Do this with recursion. You MAY NOT USE A `for` OR `while` LOOP.
     """
+    
+    # each iteration
+    # know the index
+    # if it matches, print the index
+
+    # get the length minus original length
+    print(len(haystack))
+    recursive_index(needle, haystack[1:])
+
+    return None
 
 
 if __name__ == '__main__':
