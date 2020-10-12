@@ -29,15 +29,15 @@ def recursive_index(needle, haystack):
     Do this with recursion. You MAY NOT USE A `for` OR `while` LOOP.
     """
     
-    # each iteration
-    # know the index
-    # if it matches, print the index
-
-    # get the length minus original length
-   
-    if not haystack: 
-        return 0
-    recursive_index(needle, haystack[1:])
+    def rec_index(needle, haystack, start_val):
+        if start_val == len(haystack):
+            return None
+        if needle == haystack[start_val]:
+            return start_val
+    
+        return rec_index(needle, haystack, start_val + 1)
+    
+    return rec_index(needle, haystack, 0)
     
 
 
