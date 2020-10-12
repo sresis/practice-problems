@@ -34,10 +34,12 @@ def recursive_index(needle, haystack):
     # if it matches, print the index
 
     # get the length minus original length
-    print(len(haystack))
+   
+    if not haystack: 
+        return 0
     recursive_index(needle, haystack[1:])
+    
 
-    return None
 
 
 if __name__ == '__main__':
