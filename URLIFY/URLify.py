@@ -28,9 +28,17 @@ def urlify(string, num):
     new_len = num - space_count + (3 * space_count)
     print(new_len)
     # go through string backwards
-    char_count = num
-    # if character is a space, increase char count by 2 and add the '%20'
-   
+    i = len(string) -1
+    while i > 0:
+        if string[i] == ' ':
+            string[i] = '0'
+            string[i-1] = '2'
+            string[i-2] = '%'
+            print(string)
+    
+        i -= 1
+
+     
 
 if __name__ == '__main__':
     import doctest
