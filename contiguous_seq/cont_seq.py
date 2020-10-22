@@ -20,6 +20,8 @@ def longest_seq(arr):
     # loop through n+1: until the curr
     # when you get to a negative number: if current sum < previous sum, start over
     all_sums = []
+    x = False
+    print(int(x))
     #ALTERNATIVE: add every sum to  an index and take the max
     for i in range(len(arr)):
         num_sum = arr[i]
