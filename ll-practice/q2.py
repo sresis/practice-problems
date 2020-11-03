@@ -8,7 +8,7 @@ DblLinkedList — a doubly-linked list with a head and tail
 You are only required to define the __init__ method for each class.
 """
 class DblNode(object):
-    def __init__(self, data, next, prev:
+    def __init__(self, data):
     self.data = data
     self.next = None
     self.prev = None
