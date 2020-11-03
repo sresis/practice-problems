@@ -100,7 +100,7 @@ def add_linked_lists(l1, l2):
             out_tail = out_tail.next
         # if any carry at the end, add it to new place
     if carryover:
-        out_tail.next = Node(carried_over_digit)
+        out_tail.next = Node(carryover)
     return out_head
 
 if __name__ == '__main__':
