@@ -16,4 +16,4 @@ def reverse_ll(node):
     while len(stack) != 0:
         current.next = stack.pop()
         current = current.next
-    return reversed_ll
+    return reversed_ll3
