@@ -32,9 +32,9 @@ def rev_list_in_place(lst):
     assignment!
     """
     # start at back and keep going
-    for i in range(int(len(lst)/2)):
-        lst[-i - 1], lst[i] = lst[i], lst[-i-1]
-
+    head = lst
+    print(head.data)
+    return lst.data
 
 
 if __name__ == '__main__':

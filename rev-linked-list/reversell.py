@@ -43,14 +43,13 @@ def reverse_linked_list(head):
     '321'
     """
     final_head = None
-    current_node = head
-    while current_node:
-        final_head = Node(current_node.data, final_head)
-        current_node = current_node.next
+    current = head
+    ll = None
+    while current:
+        final_head = Node(current.data, final_head)
+        current = current.next
 
     return final_head
-
-
 
 if __name__ == '__main__':
     import doctest
