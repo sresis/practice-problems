@@ -54,32 +54,26 @@ def has_balanced_brackets(phrase):
    string contains balanced (), {}, [], and/or <>.
    """
 
-   # the closing bracket should not come before the 
-   # bracket_dict = {'>': [], '<': [], '(': [], ')': [], '<': [], '>': [],
-   # '{': [], '}': [] }
-   b_dict = {}
-   brackets = ['[', ']', '<', '>', '(', ')', '{', '}']
-   pairs = {'(': ')', '{': '}', '[': ']', '<': '>'}
+   pairs =  {")": "(", "]": "[", "}": "{", ">": "<"}
+   openers = set(pairs.values())
    # get bracket pairs
-   # then see if its match is in i:n
-   n = len(phrase)
-   for i in range(0,len(phrase)):
-      if phrase[i] in pairs:
-         if pairs[phrase[i]] not in phrase[i:n]:
-            print('s')
+   brackets_seen = []
+
+   for char in phrase:
+      if char in openers:
+         brackets_seen.append(char)
+      elif char in pairs.keys():
+         if brackets_seen == []:
             return False
+         if brackets_seen[-1] == pairs[char]:
+            brackets_seen.pop()
+            
+         else:
+            return False
+   return brackets_seen == []
 
-         # otherwise, update n with the location of the pair
-   return True
 
-   # alternative way
-   # get the first bracket
-   # make sure the closer for that one is the last bracket
-   # the second bracket closer shouldn be second to last bracket, etc
 
-   # store recent bracket outward
-   # if the closing is not the most recent outward
-   
 
 if __name__ == '__main__':
     import doctest
