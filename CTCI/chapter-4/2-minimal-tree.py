@@ -8,6 +8,7 @@ def minimal_height_bst(sorted_array):
     middle = len(sorted_array) // 2
     left  = minimal_height_bst(sorted_array[:middle])
     right = minimal_height_bst(sorted_array[(middle+1):])
+    
     return BSTNode(sorted_array[middle], left, right)
   
 
